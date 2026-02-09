@@ -1,44 +1,36 @@
 {
   "automationId": "6989f7279235251173dadbb7",
   "automationName": "Unnamed Automation",
-  "version": "v2",
+  "version": "v3",
   "mode": "multi-file",
   "dependencies": [
     {
-      "id": "1770653093003_14",
+      "id": "1770653647082_11",
       "name": "fs",
       "version": "latest"
     },
     {
-      "id": "1770653093003_15",
+      "id": "1770653647082_12",
       "name": "node-fetch",
       "version": "latest"
     },
     {
-      "id": "1770653093003_16",
-      "name": "messagebird",
-      "version": "latest"
-    },
-    {
-      "id": "1770653093003_17",
-      "name": "plivo",
+      "id": "1770653647082_13",
+      "name": "axios",
       "version": "latest"
     }
   ],
   "environmentVariables": [
+    "VONAGE_API_KEY",
+    "VONAGE_API_SECRET",
+    "VONAGE_SENDER_PHONE",
+    "ALERT_RECIPIENT_PHONE",
     "DEEPGRAM_API_KEY",
     "AUDIO_FILE_PATH",
-    "SMS_VENDOR",
-    "ALERT_RECIPIENT_PHONE",
-    "MESSAGEBIRD_API_KEY",
-    "MESSAGEBIRD_SENDER_PHONE",
-    "PLIVO_AUTH_ID",
-    "PLIVO_AUTH_TOKEN",
-    "PLIVO_SENDER_PHONE",
     "LOCATIONIQ_API_KEY",
     "USER_LOCATION",
     "LOCATION_LAT",
     "LOCATION_LON"
   ],
-  "syncedAt": "2026-02-09T16:12:20.739Z"
+  "syncedAt": "2026-02-09T16:17:21.458Z"
 }

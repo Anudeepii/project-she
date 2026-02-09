@@ -1,20 +1,18 @@
 // Step 1: Research APIs & set context
-// This step documents the APIs selected for each function, including vendor comparison and credential requirements.
+// This step documents the APIs selected for each function, including vendor and credential requirements.
 
 // Selected APIs:
 // - Voice Analysis: Deepgram (https://developers.deepgram.com/docs/) [Free up to 200 hours/month; API key required]
-// - SMS/Call Alerts: MessageBird (https://developers.messagebird.com/api/sms-messaging/) [Free trial credits; API key required] OR Plivo (https://www.plivo.com/docs/sdk/server/node-sdk) [Free trial credits; Auth ID & Auth Token required]
+// - SMS/Call Alerts: Nexmo/Vonage (https://developer.vonage.com/messaging/sms/send-sms) [Free trial credits; API key & secret required]
 // - Geolocation/Maps: LocationIQ (https://locationiq.com/docs) [Free API key; up to 10k requests/day]
 // - Danger Zone: Chicago Crime Data (https://dev.socrata.com/foundry/data.cityofchicago.org/ijzp-q8t2) [Open/public, US-specific]
 
-// --- Vendor Comparison ---
-// | Vendor      | API Docs                                 | Credentials         | Features/Notes          |
-// |-------------|------------------------------------------|---------------------|-------------------------|
-// | MessageBird | https://developers.messagebird.com/api   | API key, sender     | Official SDK, wide intl |
-// | Plivo       | https://www.plivo.com/docs/sdk/server/node-sdk | Auth ID & Token, sender | Official SDK, robust voice/calls |
-// Both offer Node.js SDKs, robust error/status, free credits, E.164 sender/recipient support.
-// Use SMS_VENDOR env or context to choose vendor dynamically.
-
+// --- Vendor Details ---
+// | Vendor   | API Docs                                   | Credentials            | Features/Notes            |
+// |----------|--------------------------------------------|------------------------|---------------------------|
+// | Vonage   | https://developer.vonage.com/messaging/sms/send-sms | API key, secret, sender | SMS/call, robust REST API |
+// (Vonage is formerly Nexmo, now unified APIs.)
+//
 setContext("selectedAPIs", {
   voiceAnalysis: {
     name: "Deepgram",
@@ -23,9 +21,9 @@ setContext("selectedAPIs", {
     keyRequired: true
   },
   smsCallAlert: {
-    name: "MessageBird or Plivo",
-    docs: "https://developers.messagebird.com/api; https://www.plivo.com/docs/sdk/server/node-sdk",
-    notes: "Free trial credits, choose vendor via SMS_VENDOR env/context",
+    name: "Nexmo/Vonage",
+    docs: "https://developer.vonage.com/messaging/sms/send-sms",
+    notes: "Free trial credits, API key/secret required",
     keyRequired: true
   },
   geolocationMap: {
@@ -42,4 +40,4 @@ setContext("selectedAPIs", {
   }
 })
 
-console.log("API selections recorded in context, including vendor comparison for SMS alerts.")
+console.log("API selections recorded in context. SMS/call alerts now use Nexmo/Vonage only.")
