@@ -1,0 +1,36 @@
+{
+  "automationId": "6989f7279235251173dadbb7",
+  "automationName": "Unnamed Automation",
+  "version": "v1",
+  "mode": "multi-file",
+  "dependencies": [
+    {
+      "id": "1770652292730_11",
+      "name": "fs",
+      "version": "latest"
+    },
+    {
+      "id": "1770652292730_12",
+      "name": "node-fetch",
+      "version": "latest"
+    },
+    {
+      "id": "1770652292730_13",
+      "name": "twilio",
+      "version": "latest"
+    }
+  ],
+  "environmentVariables": [
+    "DEEPGRAM_API_KEY",
+    "AUDIO_FILE_PATH",
+    "TWILIO_ACCOUNT_SID",
+    "TWILIO_AUTH_TOKEN",
+    "ALERT_RECIPIENT_PHONE",
+    "TWILIO_SENDER_PHONE",
+    "LOCATIONIQ_API_KEY",
+    "USER_LOCATION",
+    "LOCATION_LAT",
+    "LOCATION_LON"
+  ],
+  "syncedAt": "2026-02-09T16:02:27.814Z"
+}
